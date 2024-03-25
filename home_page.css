@@ -32,10 +32,7 @@ background: linear-gradient(180deg, rgba(0,16,17,1) 56%, rgba(0,212,255,0) 100%)
     color: #98CE00; /* Hover color */
 }
 
-/* Ensure the link doesn't change appearance when visited */
 
-
-/* Optional: If you want to remove the focus outline, add this rule */
 .navigation-section a:focus {
     outline: none; /* Removes the focus outline */
 }
