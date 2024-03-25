@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans';
+    padding: 50px 100px;
+    background-color: #001011;
+}
+
+nav{
+    display: flex;
+    justify-content: end;
+    margin: 2em auto;
+    position:sticky;
+    top: 0;
+    background: rgb(0,16,17);
+background: linear-gradient(180deg, rgba(0,16,17,1) 56%, rgba(0,212,255,0) 100%);
+}
+
+.navigation-section a {
+    color: #FFFFFC; /* Set the color of the link text */
+    text-decoration: none; /* Removes the underline from the link */
+    display: block; /* Make the entire navigation-section area clickable */
+    padding: 20px; /* Match the padding of navigation-section */
+    transition: 0.16s ease-out; /* Match the transition of navigation-section */
+}
+
+.navigation-section a:hover {
+    color: #98CE00; /* Hover color */
+}
+
+/* Ensure the link doesn't change appearance when visited */
+
+
+/* Optional: If you want to remove the focus outline, add this rule */
+.navigation-section a:focus {
+    outline: none; /* Removes the focus outline */
+}
+
+.site-title {
+    font-size: 7.5em;
+    padding: 0.4em;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFC;
+    border-bottom-width: 0.1em;
+    border-color: #98CE00;
+    border-bottom-style: solid;
+}
+
+.backgr-thumbnails{
+    margin-top: 200px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 23em 23em;
+    gap: 20px 50px;
+}
+
+.bg-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.322);
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+}
+
+.bg-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(152, 206, 0, 0); /* Initially transparent */
+    border-radius: inherit; /* Inherit the border-radius of the parent */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for the overlay */
+}
+
+.bg-img:hover::after {
+    background-color: rgba(152, 206, 0, 0.5); /* Add semi-transparent overlay on hover with 50% opacity */
+}
+
+.image-tb {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out; /* Transition for the transform property */
+}
+
+.bg-img:hover .image-tb {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.img-title {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    color: white;
+    font-size: 2em; /* Adjust as needed */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out; /* Transition for opacity and visibility */
+}
+
+.bg-img:hover .img-title {
+    visibility: visible; /* Make the title visible on hover */
+    opacity: 1; /* Fade in the title */
+}
