@@ -51,16 +51,18 @@ background: linear-gradient(180deg, rgba(0,16,17,1) 56%, rgba(0,212,255,0) 100%)
 
 .backgr-thumbnails{
     margin-top: 200px;
-    display: grid;
+    display: flex;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 23em 23em;
     gap: 20px 50px;
+    flex-wrap: wrap;
 }
 
 .bg-img {
     height: 100%;
-    width: 100%;
+    min-width: 150px;
+    max-width: 500px;
     overflow: hidden;
     border-radius: 3%;
     display: flex;
