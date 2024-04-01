@@ -5,6 +5,7 @@
 }
 
 body {
+    margin: 0;
     font-family: 'Josefin Sans';
     padding: 50px 100px;
     background-color: #001011;
@@ -12,12 +13,14 @@ body {
 
 nav{
     display: flex;
+    justify-content: flex-end; 
+    padding: 2em 2em;
     justify-content: end;
     margin: 2em auto;
     position:sticky;
     top: 0;
     background: rgb(0,16,17);
-background: linear-gradient(180deg, rgba(0,16,17,1) 56%, rgba(0,212,255,0) 100%);
+    background: linear-gradient(180deg, rgba(0,16,17,1) 75%, rgba(0,212,255,0) 100%);
 }
 
 .navigation-section a {
