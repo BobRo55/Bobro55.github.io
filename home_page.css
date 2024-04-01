@@ -15,9 +15,11 @@ nav{
     display: flex;
     justify-content: flex-end; 
     padding: 2em 2em;
+    width: 100%;
     justify-content: end;
     margin: 2em auto;
     position:sticky;
+    z-index: 10;
     top: 0;
     background: rgb(0,16,17);
     background: linear-gradient(180deg, rgba(0,16,17,1) 75%, rgba(0,212,255,0) 100%);
@@ -41,7 +43,8 @@ nav{
 }
 
 .site-title {
-    font-size: 7.5em;
+    display: flex;
+    font-size: 7.5rem;
     padding: 0.4em;
     display: block;
     align-items: center;
