@@ -7,7 +7,6 @@
 body {
     margin: 0;
     font-family: 'Josefin Sans';
-    padding: 50px 100px;
     background-color: #001011;
 }
 
@@ -16,11 +15,10 @@ nav{
     justify-content: flex-end; 
     padding: 2em 2em;
     width: 100%;
-    justify-content: end;
-    margin: 2em auto;
     position:sticky;
     z-index: 10;
     top: 0;
+
     background: rgb(0,16,17);
     background: linear-gradient(180deg, rgba(0,16,17,1) 75%, rgba(0,212,255,0) 100%);
 }
@@ -42,11 +40,16 @@ nav{
     outline: none; /* Removes the focus outline */
 }
 
-.site-title {
+title {
     display: flex;
-    font-size: 7.5rem;
+}
+
+.site-title {
+    display: inline-flex;
+    font-size: 4rem;
     padding: 0.4em;
     display: block;
+    justify-content: center;
     align-items: center;
     text-align: center;
     color: #FFFFFC;
@@ -63,6 +66,7 @@ nav{
     grid-template-rows: 23em 23em;
     gap: 20px 50px;
     flex-wrap: wrap;
+    margin-bottom: 10rem;
 }
 
 .bg-img {
